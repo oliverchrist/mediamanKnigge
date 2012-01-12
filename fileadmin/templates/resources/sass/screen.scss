@@ -4,29 +4,51 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass/css3";
 
-.website { width:1000px; margin:0 auto;
-    header { border:1px solid black; height:100px;
-        .mainNavigation {
+$rosa: #ffa6a6;
+$orange: #ffd089;
+$gelb: #feff98;
+$green: #a1ffa2;
+$blau: #a6ceff;
+$lila: #caa2df;
+$grey: #a3a39f;
+$rot: #ff0000;
+
+@mixin rahmen {
+  border:2px solid $grey;
+  border-radius:20px;
+  background:rgba(255, 255, 255, 0.80);
+}
+
+body { background:$blau; font-family:arial; font-size:14px; line-height:20px; }
+.website { width:700px; margin:40px auto; position:relative; padding-left:530px;
+    .title { position:absolute; top:10px; left:0px; background:url(../img/title.png) no-repeat; width:512px; height:290px;
+        .box { padding:40px 50px; font-size:30px; line-height:40px; color:$rot; }
+    }
+    header { position:relative; height:100px; margin-bottom:20px; @include rahmen; 
+        .mainNavigation { position:absolute; right:20px; bottom:20px; @include rahmen; 
             ul {
-                li { display:inline;
-                    a {
+                li { display:inline-block; border-right:2px solid #ccc; padding:7px 10px;
+                    &:last-child { border:none; }
+                    a { text-decoration:none; color:black;
                     }
                 }
             }
         }
     }
-    .main {
-        .subNavigation { float:left; width:200px; border:1px solid black;
+    .main { position:relative;
+        .subNavigation { position:absolute; left:0; top:0; width:200px; @include rahmen;
             ul {
-                li {
-                    a {
+                li { border-bottom:2px solid #ccc; padding:7px 10px;
+                    &:last-child { border:none; }
+                    a { text-decoration:none; color:black;
                     }
                 }
             }
         }
-        .content { float:left; width:792px; display:inline-block; border:1px solid black; min-height:500px;
-          
+        .content { float:right; display:inline-block; min-height:500px; padding:20px; @include rahmen;
+            h1 { font-size:30px; line-height:40px; }
         }
     }
 }

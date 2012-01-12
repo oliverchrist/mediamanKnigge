@@ -67,31 +67,110 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 8, ../sass/screen.scss */
+/* line 24, ../sass/screen.scss */
+body {
+  background: #a6ceff;
+  font-family: arial;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* line 25, ../sass/screen.scss */
 .website {
-  width: 1000px;
-  margin: 0 auto;
+  width: 700px;
+  margin: 40px auto;
+  position: relative;
+  padding-left: 530px;
 }
-/* line 9, ../sass/screen.scss */
+/* line 26, ../sass/screen.scss */
+.website .title {
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  background: url(../img/title.png) no-repeat;
+  width: 512px;
+  height: 290px;
+}
+/* line 27, ../sass/screen.scss */
+.website .title .box {
+  padding: 40px 50px;
+  font-size: 30px;
+  line-height: 40px;
+  color: red;
+}
+/* line 29, ../sass/screen.scss */
 .website header {
-  border: 1px solid black;
+  position: relative;
   height: 100px;
+  margin-bottom: 20px;
+  border: 2px solid #a3a39f;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
 }
-/* line 12, ../sass/screen.scss */
+/* line 30, ../sass/screen.scss */
+.website header .mainNavigation {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  border: 2px solid #a3a39f;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+}
+/* line 32, ../sass/screen.scss */
 .website header .mainNavigation ul li {
-  display: inline;
-}
-/* line 20, ../sass/screen.scss */
-.website .main .subNavigation {
-  float: left;
-  width: 200px;
-  border: 1px solid black;
-}
-/* line 28, ../sass/screen.scss */
-.website .main .content {
-  float: left;
-  width: 792px;
   display: inline-block;
-  border: 1px solid black;
+  border-right: 2px solid #ccc;
+  padding: 7px 10px;
+}
+/* line 33, ../sass/screen.scss */
+.website header .mainNavigation ul li:last-child {
+  border: none;
+}
+/* line 34, ../sass/screen.scss */
+.website header .mainNavigation ul li a {
+  text-decoration: none;
+  color: black;
+}
+/* line 40, ../sass/screen.scss */
+.website .main {
+  position: relative;
+}
+/* line 41, ../sass/screen.scss */
+.website .main .subNavigation {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  border: 2px solid #a3a39f;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+}
+/* line 43, ../sass/screen.scss */
+.website .main .subNavigation ul li {
+  border-bottom: 2px solid #ccc;
+  padding: 7px 10px;
+}
+/* line 44, ../sass/screen.scss */
+.website .main .subNavigation ul li:last-child {
+  border: none;
+}
+/* line 45, ../sass/screen.scss */
+.website .main .subNavigation ul li a {
+  text-decoration: none;
+  color: black;
+}
+/* line 50, ../sass/screen.scss */
+.website .main .content {
+  float: right;
+  display: inline-block;
   min-height: 500px;
+  padding: 20px;
+  border: 2px solid #a3a39f;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+}
+/* line 51, ../sass/screen.scss */
+.website .main .content h1 {
+  font-size: 30px;
+  line-height: 40px;
 }
